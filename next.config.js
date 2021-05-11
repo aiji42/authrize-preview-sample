@@ -17,11 +17,11 @@ module.exports = {
               value: process.env.AUTH_KEY,
             },
           ],
-          destination: '/:path*/',
+          destination: '/:path*',
         },
         {
           source: '/:path*/',
-          destination: '/deny/',
+          destination: '/deny',
         }
       ]
     }
