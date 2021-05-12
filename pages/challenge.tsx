@@ -1,9 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
-const Deny: FC = () => {
+const Challenge: FC = () => {
+  const router = useRouter()
+  useEffect(() => {
+    fetch('/api/passport')
+      .then(({ ok }) => {
+        ok && router.reload()
+      })
+  }, [])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -34,4 +43,4 @@ const Deny: FC = () => {
   )
 }
 
-export default Deny
+export default Challenge

@@ -26,7 +26,7 @@ AUTH_KEY: random string
 
 ## Previewing
 
-Access /api/auth/ from the IP address specified by `ALLOW_FROM` in advance. A cookie will be given for authentication.  
+When accessing from the IP address specified by `ALLOW_FROM`, a cookie will be given for authentication.  
 After that, you will be able to access the site as usual.
 
 By the rewrites rule, access without an authentication cookie will be denied.

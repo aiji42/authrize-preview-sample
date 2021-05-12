@@ -21,7 +21,7 @@ module.exports = {
         },
         {
           source: '/:path*/',
-          destination: '/deny',
+          destination: '/challenge',
         }
       ]
     }
